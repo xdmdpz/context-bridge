@@ -1,85 +1,93 @@
 # context-bridge
 
-A Git-based shared context template for coordinating multiple AI agents across projects.
+一个基于 Git 的多 Agent 协作上下文模板。
 
-`context-bridge` is not trying to be a giant memory brain. Its job is simpler and more practical:
+`context-bridge` 不是一个“万能记忆系统”，而是解决多 Agent 协作中的核心问题：
 
-- reduce repeated explanation
-- make task handoff explicit
-- keep project context aligned across web AI, local coding agents, and other automation
+- 项目背景反复解释
+- 任务状态反复同步
+- Web 侧与本地代码现实逐渐脱节
 
----
+本项目通过 **Git + 结构化上下文文件**，让多 Agent 协作变得：
 
-## What this template focuses on
-
-This repository captures a lightweight but usable model for multi-agent collaboration:
-
-- **repository-first execution**: tasks must be written to the repo before execution
-- **repo-based project identity**: same Git repository = same project
-- **project context split**:
-  - `project_profile` = long-lived facts
-  - `current_snapshot` = current working state
-- **handoff / feedback loop**: task flow is explicit and traceable
-- **cross-agent collaboration**: agents can hand work to other agents, including across projects
+- 可追踪
+- 可复盘
+- 可复用
 
 ---
 
-## Core concepts
+## 核心设计
 
-### 1. Project identity
+### 1. 仓库即事实源
 
-Project identity is resolved by `source_repo` first.
-
-That means:
-
-- same Git repo => same project
-- similar names do **not** imply same project
-- task paths / feedback paths do **not** define identity
-
-### 2. Project lifecycle
-
-A project usually moves through three stages:
-
-- **registered**: has a registry entry
-- **initialized**: has profile / snapshot / directories
-- **activated**: has at least one real handoff -> feedback cycle
-
-### 3. Context split
-
-#### `project_profile.md`
-Use for:
-- architecture
-- stable constraints
-- core entrypoints
-- long-lived project facts
-
-Do **not** use for:
-- today's progress
-- temporary blockers
-- next-step notes
-
-#### `current_snapshot.md`
-Use for:
-- current goal
-- current progress
-- current blockers / risks
-- next step
-- active working surface
-
-Do **not** use for:
-- broad architecture explanation
-- durable background that rarely changes
-
-### 4. Task routing
-
-- project agents default to their own project tasks
-- any suitable agent may execute **global/system** tasks
-- local agents may hand off tasks to other local agents
-- cross-project collaboration is allowed, but must still go through handoff / feedback
+所有共享信息必须写入仓库，而不是只存在于对话中。
 
 ---
 
-## Suggested structure
+### 2. 项目标识（Project Identity）
+
+项目以 `source_repo` 为唯一标识：
+
+- 同一个 Git 仓库 = 同一个项目
+- 名称相似 ≠ 同一个项目
+- task / feedback 路径不作为判断依据
+
+---
+
+### 3. 项目生命周期
+
+一个项目通常经历：
+
+- registered（已注册）
+- initialized（已初始化）
+- activated（已跑通任务流）
+
+只有出现 handoff → feedback 才算真正激活。
+
+---
+
+### 4. 上下文分层
+
+#### project_profile
+长期稳定信息：
+
+- 架构
+- 规则
+- 入口
+- 约束
+
+#### current_snapshot
+当前状态：
+
+- 当前目标
+- 进度
+- 阻塞
+- 下一步
+
+---
+
+### 5. 任务流（核心）
+
+所有任务必须走：
+
+```text
+handoff → 执行 → feedback
+```
+
+否则不算真实执行。
+
+---
+
+### 6. Agent 路由规则
+
+- 默认：项目 agent 处理本项目任务
+- 全局任务：任意 agent 可执行
+- 支持 agent ↔ agent 派发任务
+- 跨项目必须走 handoff / feedback
+
+---
+
+## 推荐目录结构
 
 ```text
 context/
@@ -89,9 +97,11 @@ context/
       current_snapshot.md
       handoffs/
       feedback/
+
   agents/
     registry/
     bindings/
+
   system/
     rules.md
     project-identity.md
@@ -100,45 +110,34 @@ context/
 
 ---
 
-## Minimal operating rules
+## 最小规则
 
-1. tasks must be written as handoff files
-2. execution results must be written as feedback files
-3. changing state belongs in snapshot, not profile
-4. stable identity belongs to source_repo, not naming guesswork
-5. cross-agent work must stay explicit and traceable
-
----
-
-## Best fit
-
-This template is useful when you have workflows like:
-
-- ChatGPT or other web AI plans the work
-- a local coding agent executes the work
-- another local agent provides support from a related project
-- the project evolves over time and needs durable context
+1. 任务必须写入 handoff
+2. 执行结果必须写入 feedback
+3. 状态写 snapshot，不写 profile
+4. 项目标识以 repo 为准
+5. 协作必须可追踪
 
 ---
 
-## Start here
+## 适用场景
 
-Read these docs next:
-
-- `docs/quickstart.md`
-- `docs/project-model.md`
-- `docs/agent-routing.md`
-- `docs/onboarding.md`
+- ChatGPT 规划 → 本地 agent 执行
+- 多 agent 协作开发
+- 长周期项目上下文同步
 
 ---
 
-## Design goal
+## 快速开始
 
-The goal of `context-bridge` is not to replace every memory system.
+见：docs/quickstart.md
 
-Its goal is to make agent collaboration:
+---
 
-- explicit
-- traceable
-- reusable
-- less fragile
+## 目标
+
+让 Agent 协作：
+
+- 更简单
+- 更稳定
+- 更少重复沟通
