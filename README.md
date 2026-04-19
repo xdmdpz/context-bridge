@@ -9,6 +9,7 @@
 - 任务交接
 - 执行回执
 - 跨项目边界
+- 可执行的 skill 抽象
 
 这样做的结果是：
 
@@ -30,8 +31,9 @@
 2. 项目标识以 `source_repo` 为准
 3. 状态写 `current_snapshot.md`
 4. 稳定事实写 `project_profile.md`
-5. 任务流必须走 `handoff → 执行 → feedback`
+5. 任务流必须走 `handoff -> 执行 -> feedback`
 6. 所有协作必须显式、可追踪、可复盘
+7. `skill` 是必要抽象层，不是附属说明
 
 ## 运行模型
 
@@ -47,9 +49,33 @@
 - [`docs/onboarding.md`](docs/onboarding.md)
 - [`docs/project-model.md`](docs/project-model.md)
 - [`docs/agent-routing.md`](docs/agent-routing.md)
+- [`skills/README.md`](skills/README.md)
+- [`skills/context-bridge/SKILL.md`](skills/context-bridge/SKILL.md)
 - [`examples/README.md`](examples/README.md)
 - [`CONTRIBUTING.md`](CONTRIBUTING.md)
 - [`LICENSE`](LICENSE)
+
+## Skill 层
+
+`skill` 是 `context-bridge` 的必要抽象层。
+
+- `docs/` 负责说明规则和结构
+- `skills/` 负责把规则变成可执行入口
+- 真实任务仍然通过 `handoff -> 执行 -> feedback` 流转
+
+## 配图
+
+### 任务流
+
+![Task flow diagram](assets/bridge-flow.svg)
+
+### 上下文分层
+
+![Context layers diagram](assets/layers.svg)
+
+### Skill 抽象
+
+![Skill layer diagram](assets/skill-lens.svg)
 
 ## 目录概览
 
@@ -70,11 +96,22 @@ docs/
   onboarding.md
   project-model.md
   agent-routing.md
+
+skills/
+  README.md
+  context-bridge/
+    SKILL.md
+
 examples/
   README.md
   2026-04-19-example-note.md
   task-handoff.example.json
   task-feedback.example.json
+
+assets/
+  bridge-flow.svg
+  layers.svg
+  skill-lens.svg
 ```
 
 ## 约定
@@ -83,6 +120,7 @@ examples/
 - `current_snapshot.md` 记录当前状态
 - `handoffs/` 记录任务输入
 - `feedback/` 记录执行输出
+- `docs/index.md` 必须跟随 `docs/` 下新增文档同步更新
 
 ## 目标
 

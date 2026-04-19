@@ -1,0 +1,39 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="640" viewBox="0 0 1200 640" role="img" aria-labelledby="title desc">
+  <title id="title">Context Layers</title>
+  <desc id="desc">A stacked diagram showing profile, snapshot, handoff, feedback, docs, and system layers.</desc>
+  <defs>
+    <linearGradient id="bg2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#111827"/>
+      <stop offset="100%" stop-color="#1f2937"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="640" rx="32" fill="url(#bg2)"/>
+  <text x="80" y="96" fill="#e5e7eb" font-family="Arial, Helvetica, sans-serif" font-size="42" font-weight="700">Context Layers</text>
+  <text x="80" y="136" fill="#9ca3af" font-family="Arial, Helvetica, sans-serif" font-size="20">stable facts, current state, task input, task output</text>
+
+  <g transform="translate(180,190)">
+    <rect x="0" y="0" width="840" height="70" rx="18" fill="#334155"/>
+    <rect x="20" y="12" width="160" height="46" rx="14" fill="#0f172a"/>
+    <text x="100" y="42" text-anchor="middle" fill="#f8fafc" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700">system</text>
+
+    <rect x="0" y="90" width="840" height="70" rx="18" fill="#4338ca"/>
+    <rect x="20" y="102" width="200" height="46" rx="14" fill="#1e1b4b"/>
+    <text x="120" y="132" text-anchor="middle" fill="#f8fafc" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700">project_profile</text>
+
+    <rect x="0" y="180" width="840" height="70" rx="18" fill="#0ea5e9"/>
+    <rect x="20" y="192" width="220" height="46" rx="14" fill="#082f49"/>
+    <text x="130" y="222" text-anchor="middle" fill="#f8fafc" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700">current_snapshot</text>
+
+    <rect x="0" y="270" width="840" height="70" rx="18" fill="#14b8a6"/>
+    <rect x="20" y="282" width="130" height="46" rx="14" fill="#042f2e"/>
+    <text x="85" y="312" text-anchor="middle" fill="#f8fafc" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700">handoff</text>
+
+    <rect x="0" y="360" width="840" height="70" rx="18" fill="#22c55e"/>
+    <rect x="20" y="372" width="150" height="46" rx="14" fill="#052e16"/>
+    <text x="95" y="402" text-anchor="middle" fill="#f8fafc" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700">feedback</text>
+
+    <rect x="0" y="450" width="840" height="70" rx="18" fill="#f59e0b"/>
+    <rect x="20" y="462" width="100" height="46" rx="14" fill="#451a03"/>
+    <text x="70" y="492" text-anchor="middle" fill="#f8fafc" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700">docs</text>
+  </g>
+</svg>

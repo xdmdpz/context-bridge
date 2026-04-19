@@ -1,0 +1,36 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="640" viewBox="0 0 1200 640" role="img" aria-labelledby="title desc">
+  <title id="title">Skill Layer</title>
+  <desc id="desc">A diagram showing skill as the executable layer between docs and project operations.</desc>
+  <defs>
+    <linearGradient id="bg3" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0b1120"/>
+      <stop offset="100%" stop-color="#172554"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="640" rx="32" fill="url(#bg3)"/>
+  <circle cx="600" cy="320" r="250" fill="url(#glow)"/>
+  <text x="80" y="96" fill="#e2e8f0" font-family="Arial, Helvetica, sans-serif" font-size="42" font-weight="700">Skill Layer</text>
+  <text x="80" y="136" fill="#94a3b8" font-family="Arial, Helvetica, sans-serif" font-size="20">docs define the rules, skills turn them into an execution entry</text>
+
+  <rect x="120" y="240" width="250" height="160" rx="24" fill="#1d4ed8"/>
+  <text x="245" y="292" text-anchor="middle" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="700">docs</text>
+  <text x="245" y="328" text-anchor="middle" fill="#dbeafe" font-family="Arial, Helvetica, sans-serif" font-size="18">rules + structure</text>
+
+  <rect x="460" y="210" width="280" height="220" rx="28" fill="#0f172a" stroke="#38bdf8" stroke-width="3"/>
+  <text x="600" y="278" text-anchor="middle" fill="#f8fafc" font-family="Arial, Helvetica, sans-serif" font-size="32" font-weight="700">skill</text>
+  <text x="600" y="316" text-anchor="middle" fill="#7dd3fc" font-family="Arial, Helvetica, sans-serif" font-size="18">executable abstraction</text>
+  <text x="600" y="346" text-anchor="middle" fill="#94a3b8" font-family="Arial, Helvetica, sans-serif" font-size="18">turns documentation into action</text>
+
+  <rect x="830" y="240" width="250" height="160" rx="24" fill="#16a34a"/>
+  <text x="955" y="292" text-anchor="middle" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="700">project</text>
+  <text x="955" y="328" text-anchor="middle" fill="#dcfce7" font-family="Arial, Helvetica, sans-serif" font-size="18">real execution</text>
+
+  <path d="M370 320 L450 320" stroke="#38bdf8" stroke-width="8" stroke-linecap="round"/>
+  <path d="M420 302 L450 320 L420 338" fill="none" stroke="#38bdf8" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M740 320 L820 320" stroke="#38bdf8" stroke-width="8" stroke-linecap="round"/>
+  <path d="M790 302 L820 320 L790 338" fill="none" stroke="#38bdf8" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

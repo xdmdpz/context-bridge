@@ -35,7 +35,11 @@ Agent 注册与绑定目录，用来说明谁能处理什么任务。
 
 仓库级说明入口，适合新读者先看。
 
-### 6. `examples/`
+### 6. `skills/`
+
+可执行抽象层。这里的 canonical skill 是 `skills/context-bridge/SKILL.md`。
+
+### 7. `examples/`
 
 最小 handoff / feedback 样例，方便直接照着写。
 
@@ -52,10 +56,11 @@ read docs -> identify project -> read profile -> read snapshot -> read handoff -
 - `handoffs/` 写任务输入
 - `feedback/` 写执行输出
 - `docs/` 写稳定说明
+- `skills/` 写可执行入口
 
-## 开源原则
+## 阅读顺序
 
 - 新人先看 `README.md`
 - 再看 `docs/index.md`
 - 再看 `docs/architecture.md`
-- 最后进入 `quickstart.md`
+- 再看 `skills/context-bridge/SKILL.md`

@@ -1,0 +1,39 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="640" viewBox="0 0 1200 640" role="img" aria-labelledby="title desc">
+  <title id="title">Context Bridge Task Flow</title>
+  <desc id="desc">A diagram showing handoff, execution, and feedback flowing through context-bridge.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#4f46e5"/>
+      <stop offset="50%" stop-color="#06b6d4"/>
+      <stop offset="100%" stop-color="#22c55e"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="640" rx="32" fill="url(#bg)"/>
+  <text x="80" y="96" fill="#e2e8f0" font-family="Arial, Helvetica, sans-serif" font-size="42" font-weight="700">Task Flow</text>
+  <text x="80" y="136" fill="#94a3b8" font-family="Arial, Helvetica, sans-serif" font-size="20">handoff -> execution -> feedback</text>
+
+  <rect x="80" y="220" width="240" height="140" rx="24" fill="#1d4ed8"/>
+  <text x="200" y="275" text-anchor="middle" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="700">handoff</text>
+  <text x="200" y="310" text-anchor="middle" fill="#dbeafe" font-family="Arial, Helvetica, sans-serif" font-size="18">task input</text>
+
+  <rect x="480" y="220" width="240" height="140" rx="24" fill="#0f766e"/>
+  <text x="600" y="275" text-anchor="middle" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="700">execute</text>
+  <text x="600" y="310" text-anchor="middle" fill="#ccfbf1" font-family="Arial, Helvetica, sans-serif" font-size="18">agent work</text>
+
+  <rect x="880" y="220" width="240" height="140" rx="24" fill="#166534"/>
+  <text x="1000" y="275" text-anchor="middle" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="700">feedback</text>
+  <text x="1000" y="310" text-anchor="middle" fill="#dcfce7" font-family="Arial, Helvetica, sans-serif" font-size="18">task result</text>
+
+  <path d="M320 290 L470 290" stroke="url(#accent)" stroke-width="8" stroke-linecap="round"/>
+  <path d="M440 272 L470 290 L440 308" fill="none" stroke="url(#accent)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M720 290 L870 290" stroke="url(#accent)" stroke-width="8" stroke-linecap="round"/>
+  <path d="M840 272 L870 290 L840 308" fill="none" stroke="url(#accent)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <rect x="330" y="440" width="540" height="120" rx="24" fill="#111827" stroke="#334155" stroke-width="2"/>
+  <text x="600" y="490" text-anchor="middle" fill="#e2e8f0" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700">context-bridge</text>
+  <text x="600" y="525" text-anchor="middle" fill="#94a3b8" font-family="Arial, Helvetica, sans-serif" font-size="18">shared source of truth for multi-agent collaboration</text>
+</svg>
