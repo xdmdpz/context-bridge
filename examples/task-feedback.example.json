@@ -1,0 +1,18 @@
+﻿{
+  "task_id": "2026-04-19-example-001",
+  "project_id": "demo-project",
+  "status": "done",
+  "done": [
+    "整理了 demo-project 的项目上下文样例"
+  ],
+  "changed_files": [
+    "context/projects/demo-project/project_profile.md",
+    "context/projects/demo-project/current_snapshot.md"
+  ],
+  "open_questions": [],
+  "summary": "完成 demo-project 的最小任务流示例。",
+  "docs": [
+    "examples/2026-04-19-example-note.md"
+  ],
+  "updated_at": "2026-04-19"
+}

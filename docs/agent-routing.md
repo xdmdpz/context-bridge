@@ -1,4 +1,6 @@
-# Agent Routing
+﻿# Agent Routing
+
+先看 [`docs/index.md`](./index.md)。
 
 - 默认：项目 agent 处理本项目任务
 - 全局任务：任意 agent

@@ -1,4 +1,6 @@
-# Project Model
+﻿# Project Model
+
+先看 [`docs/index.md`](./index.md)。
 
 ## Identity
 

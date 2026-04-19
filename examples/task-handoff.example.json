@@ -1,0 +1,21 @@
+﻿{
+  "task_id": "2026-04-19-example-001",
+  "project_id": "demo-project",
+  "source_repo": "ssh://git@example.com/demo-project.git",
+  "from": "chatgpt-web",
+  "to": "then-codex-cli",
+  "goal": "整理 demo-project 的项目上下文并写出执行回执。",
+  "background": [
+    "demo-project 需要一个最小可运行的上下文样例。"
+  ],
+  "constraints": [
+    "保持内容简短",
+    "不要把长分析写进 feedback"
+  ],
+  "deliverables": [
+    "项目摘要",
+    "任务执行回执"
+  ],
+  "questions": [],
+  "created_at": "2026-04-19"
+}

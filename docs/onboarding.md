@@ -1,4 +1,6 @@
-# Onboarding
+﻿# Onboarding
+
+先看 [`docs/index.md`](./index.md)。
 
 ## 目标
 

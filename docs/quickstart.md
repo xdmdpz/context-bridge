@@ -1,4 +1,6 @@
-# Quickstart
+﻿# Quickstart
+
+先看 [`docs/index.md`](./index.md)。
 
 ## 1. Fork 仓库
 
